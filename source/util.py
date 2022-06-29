@@ -15,11 +15,9 @@ def centered_text(text):
 
 
 def centered_button(text, help_text):
-    button_state = False
-    cols = st.columns(9)
-    with cols[4]:
-        button_state = st.button(text, help=help_text)
-    return button_state
+    cols = st.columns(7)
+    with cols[len(cols) / 2]:
+        return st.button(text, help=help_text)
 
 
 def load_image(image_file):
