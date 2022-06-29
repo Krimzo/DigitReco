@@ -1,6 +1,3 @@
 
-numpy
-pandas
-matplotlib
 pillow
 pytesseract
