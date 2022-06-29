@@ -12,7 +12,7 @@ if image_info is not None:
         show_image(image_file)
 
         digit_data = read_digits(image_file)
-        if digit_data is None:
+        if digit_data == "":
             centered_text("NO DIGITS")
         else:
             centered_text(digit_data)

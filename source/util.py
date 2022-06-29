@@ -20,4 +20,4 @@ def show_image(img):
 
 
 def read_digits(image):
-    return ts.image_to_string(image, lang="eng", config="--psm 3 --oem 3 -c tessedit_char_whitelist=0123456789")
+    return ts.image_to_string(image, lang="eng")
