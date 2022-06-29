@@ -1,7 +1,7 @@
 from util import *
 
 
-st.title("Digital Number Recognition")
+centered_title("Digital Number Recognition")
 
 image_info = st.file_uploader("", type=["png", "jpg", "jpeg", "bmp"], accept_multiple_files=False)
 
