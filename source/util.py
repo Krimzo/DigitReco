@@ -28,5 +28,5 @@ def read_digits(img):
 
     show_image(edited_image)
 
-    raw_digits = ts.image_to_string(edited_image, config="--psm 10 --oem 3")
+    raw_digits = ts.image_to_string(edited_image, config="--psm 12 --oem 3")
     return "".join(c for c in raw_digits if c in "0123456789,.")
