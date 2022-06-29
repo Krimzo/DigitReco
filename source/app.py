@@ -9,5 +9,5 @@ if image_info is not None:
     image_file = load_image(image_info)
     if image_file is not None:
         if centered_button("Read Digits", "Reads the image file and looks for digits"):
-            centered_text(read_digits(image_file))
+            centered_text("Digits: " + read_digits(image_file))
             write_image(image_file)
