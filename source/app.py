@@ -1,2 +1,10 @@
+import streamlit as st
+import numpy as np
+import pandas as pd
+import pytesseract as ts
 
-print("radi!")
+
+st.title("Digital Number Recognition")
+
+
+st.write("test")
