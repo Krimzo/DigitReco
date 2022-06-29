@@ -12,8 +12,7 @@ def centered_text(text):
 
 
 def load_image(image_file):
-	img = Image.open(image_file)
-	return img
+	return Image.open(image_file)
 
 
 def show_image(img):
@@ -21,5 +20,4 @@ def show_image(img):
 
 
 def read_digits(image):
-    raw_chars = ts.image_to_string(image)
-    return "".join(c for c in raw_chars if c.isdigit())
+    return ts.image_to_string(image, lang="eng", boxes=False, config="--psm 3 --oem 3 -c tessedit_char_whitelist=0123456789")
