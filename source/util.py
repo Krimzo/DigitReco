@@ -26,5 +26,7 @@ def read_digits(img):
     ign, edited_image = cv.threshold(np.array(edited_image), 125, 255, cv.THRESH_BINARY)
     edited_image = Image.fromarray(edited_image.astype(np.uint8))
 
+    show_image(edited_image)
+
     raw_digits = ts.image_to_string(edited_image)
     return "".join(c for c in raw_digits if c in "0123456789,.")
