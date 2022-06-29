@@ -20,5 +20,5 @@ def show_image(img):
 
 
 def read_digits(img):
-    raw_digits = ts.image_to_string(img, config="--psm 1 --oem 3")
+    raw_digits = ts.image_to_string(img, config="--psm 11 --oem 3")
     return "".join(c for c in raw_digits if c.isdigit())
