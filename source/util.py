@@ -16,7 +16,7 @@ def centered_text(text):
 
 def centered_button(text, help_text):
     button_state = False
-    col1, col2, col3 , col4, col5 = st.beta_columns(5)
+    col1, col2, col3 , col4, col5 = st.columns(5)
     with col1:
         pass
     with col2:
