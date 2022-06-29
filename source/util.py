@@ -19,6 +19,7 @@ def show_image(img):
     st.image(img, use_column_width=True)
 
 
-def read_digits(image):
-    raw_digits = ts.image_to_string(image)
+def read_digits(img):
+    raw_digits = ts.image_to_string(img)
+    return raw_digits
     return "".join(c for c in raw_digits if c.isdigit())
