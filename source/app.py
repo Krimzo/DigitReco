@@ -1,4 +1,4 @@
-from learning import *
+from read import *
 
 
 centered_title("Digital Number Recognition")
