@@ -3,10 +3,10 @@ from util import *
 
 st.title("Digital Number Recognition")
 
-image_file = st.file_uploader("", type=["png", "jpg", "jpeg", "bmp"], accept_multiple_files=False)
+image_info = st.file_uploader("", type=["png", "jpg", "jpeg", "bmp"], accept_multiple_files=False)
 
-if image_file is not None:
-    image = load_image(image_file)
+if image_info is not None:
+    st.write({ "filename":image_info.name, "filetype":image_info.type, "filesize":image_info.size })
 
-    st.write({ "filename":image_file.name, "filetype":image_file.type, "filesize":image_file.size })
-    write_centered_image(image, 500, 500)
+    image_file = load_image(image_info)
+    write_centered_image(image_file)
