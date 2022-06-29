@@ -10,4 +10,4 @@ if image_info is not None:
 
     if image_file is not None:
         show_image(image_file)
-        st.success(read_digits(image_file))
+        centered_text(read_digits(image_file))
