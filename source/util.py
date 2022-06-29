@@ -21,4 +21,5 @@ def show_image(img):
 
 
 def read_digits(image):
-    return "".join(c for c in ts.image_to_string(image) if c.isdigit())
+    raw_chars = ts.image_to_string(image)
+    return "".join(c for c in raw_chars if c.isdigit())
