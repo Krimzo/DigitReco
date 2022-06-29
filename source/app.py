@@ -1,21 +1,12 @@
-import streamlit as st
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-import pytesseract as ts
-from PIL import Image
-
-
-def load_image(image_file):
-	img = Image.open(image_file)
-	return img
+from util import *
 
 
 st.title("Digital Number Recognition")
 
-image_file = st.file_uploader("Upload Image", type=["png","jpg","jpeg"])
+image_file = st.file_uploader(type=["png", "jpg", "jpeg", "bmp"], accept_multiple_files=False)
 
 if image_file is not None:
-    file_details = { "filename":image_file.name, "filetype":image_file.type, "filesize":image_file.size }
-    st.write(file_details)
-    st.image(load_image(image_file), width=500)
+    image = load_image(image_file)
+
+    st.write({ "filename":image_file.name, "filetype":image_file.type, "filesize":image_file.size })
+    write_centered_image(image, 500, 500)
