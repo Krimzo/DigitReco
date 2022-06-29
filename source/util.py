@@ -21,3 +21,7 @@ def load_image(image_file):
 
 def show_image(img):
     st.image(img, use_column_width=True)
+
+
+def read_digits(image):
+    return "".join(c for c in ts.image_to_string(image) if c.isdigit())
