@@ -15,7 +15,7 @@ def centered_text(text):
 
 
 def centered_button(text, help_text):
-    cols = st.columns(5)
+    cols = st.columns(7)
     with cols[len(cols) // 2]:
         return st.button(text, help=help_text)
 
